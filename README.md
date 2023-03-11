@@ -1,10 +1,9 @@
-# Otp View - Jetpack Compose
+# Otp View - Jetpack Compose 
+[![](https://jitpack.io/v/evd-evanss/otp-view.svg)](https://jitpack.io/#evd-evanss/otp-view)
 
-A custom text field light-weight to enter a code usually used in cases of authentication.
+A custom text field to enter a code usually used in cases of authentication.
 
-## Linear
-
-A component for drawing linear graphs
+https://user-images.githubusercontent.com/26419059/224510388-47722cb1-5584-4266-8b86-7d5f91bd9be3.mp4
 
 ## Getting Started
 
@@ -13,8 +12,7 @@ Step 1. Include repository jitpack io in gradle (project).
 ``` kotlin
 allprojects {
     repositories {
-		...
- 		maven { url 'https://jitpack.io' }
+ 	maven { url 'https://jitpack.io' }
     }
 }
 ```
@@ -23,12 +21,11 @@ Step 2. Add the dependency in gradle (app).
 
 ``` kotlin
 dependencies {
-    ...
     implementation("com.sugarspoon.otpview:$latest_version")
 }
 ```
 
-### How to use the library?
+### How to use the component?
 
 ```Kotlin
 var otpValue by remember { mutableStateOf("") }
@@ -58,8 +55,8 @@ OtpView(
 )
 ```
 
-| Param                |                                                                                                                          Function                                                                                                                           |
-|----------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+| Param                |                                                                                                                          Description                                                                                                                           |
+|:--------------------:|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 | modifier             |                  An ordered, immutable collection of modifier elements that decorate or add behavior to Compose UI elements. For example, backgrounds, padding and click event listenersdecorate or add behavior to rows, text or buttons.                  |
 | colors               |                                                                          Represents the colors of the input text, background and content used in a text field in different states.                                                                          |
 | styles               |                                                                                                    Defines text style, shape and number of text fields.                                                                                                     |
