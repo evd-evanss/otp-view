@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Otp View</string>
+
+    <string name="sample_header">Sample</string>
+    <string name="shape_header">Shapes</string>
+    <string name="states_header">States</string>
+</resources>
