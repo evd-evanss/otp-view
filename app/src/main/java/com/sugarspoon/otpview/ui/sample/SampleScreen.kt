@@ -128,7 +128,8 @@ fun SampleScreen(
                 TextRadio(text = it)
             }
         }
-        Box(modifier = Modifier.weight(1f)) {
+        Box(modifier = Modifier.weight(1f)
+            .imePadding()) {
             Button(
                 modifier = Modifier
                     .fillMaxWidth()

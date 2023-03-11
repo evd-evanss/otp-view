@@ -146,14 +146,14 @@ fun OtpView(
                         } else {
                             if(textChanged.isNotEmpty()) {
                                 textField.value = textChanged
-                            }
-                            if (
-                                keyboardType == KeyboardType.Text ||
-                                keyboardType == KeyboardType.Ascii ||
-                                keyboardType == KeyboardType.NumberPassword ||
-                                keyboardType == KeyboardType.Uri
-                            ) {
-                                focusManager.moveFocus(FocusDirection.Right)
+                                if (
+                                    keyboardType == KeyboardType.Text ||
+                                    keyboardType == KeyboardType.Ascii ||
+                                    keyboardType == KeyboardType.NumberPassword ||
+                                    keyboardType == KeyboardType.Uri
+                                ) {
+                                    focusManager.moveFocus(FocusDirection.Right)
+                                }
                             }
                         }
                         allFieldsIsFilled(fieldList = textFieldPins, otpSize = styles.otpSize) {

@@ -1,4 +1,4 @@
-# Otp View
+# Otp View - Jetpack Compose
 
 A custom text field light-weight to enter a code usually used in cases of authentication.
 
@@ -12,20 +12,19 @@ Step 1. Include repository jitpack io in gradle (project).
 
 ``` kotlin
 allprojects {
-	repositories {
+    repositories {
 		...
  		maven { url 'https://jitpack.io' }
-	}
+    }
 }
 ```
 
 Step 2. Add the dependency in gradle (app).
 
 ``` kotlin
-depencencies {
+dependencies {
     ...
-    implementation("com.sugarspoon.library:charts:$latest_version")
-    ...
+    implementation("com.sugarspoon.otpview:$latest_version")
 }
 ```
 
