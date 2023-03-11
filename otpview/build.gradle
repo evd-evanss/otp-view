@@ -55,7 +55,7 @@ publishing {
         release(MavenPublication) {
             groupId = 'com.github.evd-evanss'
             artifactId = 'otpview'
-            version = '1.0.1-RC'
+            version = '1.0.0'
 
             afterEvaluate {
                 from components.release
