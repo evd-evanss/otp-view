@@ -36,10 +36,8 @@ OtpView(
         backgroundColor = BackgroundPinColor,
         textColor = TextColor,
         errorLabelColor = FeedbackError,
-        errorTrailingIconColor = FeedbackError,
         errorCursorColor = FeedbackError,
-        errorIndicatorColor = FeedbackError,
-        errorLeadingIconColor = FeedbackError
+        errorIndicatorColor = FeedbackError
     ),
     onAllDigitsFilled = { digitsFilled ->
         otpValue = digitsFilled
