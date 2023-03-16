@@ -146,13 +146,12 @@ fun OtpView(
                         } else {
                             if(textChanged.isNotEmpty()) {
                                 textField.value = textChanged
-                                if (
-                                    keyboardType == KeyboardType.Text ||
-                                    keyboardType == KeyboardType.Ascii ||
-                                    keyboardType == KeyboardType.NumberPassword ||
-                                    keyboardType == KeyboardType.Uri
-                                ) {
-                                    focusManager.moveFocus(FocusDirection.Right)
+                                when(keyboardType) {
+                                    KeyboardType.Text, KeyboardType.Ascii,
+                                    KeyboardType.NumberPassword, KeyboardType.Uri -> {
+                                        focusManager.moveFocus(FocusDirection.Right)
+                                    }
+                                    else -> Unit
                                 }
                             }
                         }
@@ -211,7 +210,7 @@ private fun OtpDigit(
     BasicTextField(
         value = textInput,
         onValueChange = {
-            if(it.length == 4) {
+            if(it.length >= 4) {
                onPasteEvent(it)
             } else {
                 text = it.takeLast(1)

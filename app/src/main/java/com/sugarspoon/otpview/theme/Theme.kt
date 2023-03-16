@@ -1,6 +1,5 @@
 package com.sugarspoon.otpview.theme
 
-import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.darkColors
 import androidx.compose.material.lightColors
@@ -22,20 +21,20 @@ private val LightColorPalette = lightColors(
 )
 
 @Composable
-fun OtpViewTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable () -> Unit) {
-    val colors = if (darkTheme) {
-        DarkColorPalette
-    } else {
+fun OtpViewTheme(isLightTheme: Boolean = true, content: @Composable () -> Unit) {
+    val colors = if (isLightTheme) {
         LightColorPalette
+    } else {
+        DarkColorPalette
     }
     val systemUiController = rememberSystemUiController()
-    if(darkTheme) {
+    if(isLightTheme) {
         systemUiController.setStatusBarColor(
-            color = DarkStatusBar
+            color = LightStatusBar
         )
     } else {
         systemUiController.setStatusBarColor(
-            color = LightStatusBar
+            color = DarkStatusBar
         )
     }
     systemUiController.isNavigationBarVisible = false
